@@ -102,13 +102,13 @@ Copy-Item .env.example .env
 
 ```env
 PORT=3000
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=ecommerce
+POSTGRES_USER=seu_usuario
+POSTGRES_PASSWORD=sua_senha_segura
+POSTGRES_DB=nome_do_banco
 POSTGRES_PORT=5432
 ```
 
-> Ajuste os valores conforme sua necessidade. A porta do app e do banco podem ser alteradas se necessário.
+> Use valores locais e seguros. Nunca compartilhe credenciais reais em repositórios públicos ou no README.
 
 ## Banco de dados com Docker
 
@@ -170,7 +170,17 @@ docker compose up -d
 
 ### 2. Configurar o arquivo `.env`
 
-Verifique se o `.env` foi criado corretamente e se as variáveis estão preenchidas.
+Crie o arquivo `.env` com suas próprias credenciais locais e sensíveis, seguindo o exemplo do `.env.example`.
+
+Exemplo:
+
+```env
+PORT=3000
+POSTGRES_USER=seu_usuario
+POSTGRES_PASSWORD=sua_senha_segura
+POSTGRES_DB=nome_do_banco
+POSTGRES_PORT=5432
+```
 
 ### 3. Instalar dependências
 
