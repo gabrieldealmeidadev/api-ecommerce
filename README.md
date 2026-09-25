@@ -10,6 +10,9 @@ API REST para e-commerce desenvolvida em Node.js com TypeScript e Express. O pro
 - PostgreSQL via Docker
 - dotenv
 - tsx para desenvolvimento
+- Jest
+- ts-jest
+- Supertest
 
 ## Estrutura atual do projeto
 
@@ -47,7 +50,7 @@ API REST para e-commerce desenvolvida em Node.js com TypeScript e Express. O pro
 - `src/integrations/shipping/`: integrações com transportadoras/entregas.
 - `src/middlewares/`: middlewares personalizados.
 - `src/routes/`: rotas da aplicação.
-- `src/test/`: arquivos de teste.
+- `tests/`: arquivos de teste.
 - `src/types/`: tipos TypeScript.
 
 ## Pré-requisitos
@@ -160,6 +163,24 @@ npm start
 
 Esse comando executa o arquivo compilado em `dist/server.js`.
 
+## Testes
+
+Os testes usam Jest e ficam na pasta `tests/`.
+
+```bash
+# Todos os testes
+npm test
+
+# Um arquivo específico
+npm test -- tests/users/user_controller.test.ts
+
+# Modo watch
+npm test -- --watch
+
+# Relatório de cobertura
+npm test -- --coverage
+```
+
 ## Como rodar o projeto
 
 ### 1. Subir o banco
@@ -215,7 +236,6 @@ Este projeto está em estrutura inicial. Os diretórios de rotas, controllers, m
 - configurar conexão com PostgreSQL
 - criar modelos e serviços de negócio
 - adicionar middlewares de erro e validação
-- criar testes automatizados
 - adicionar documentação dos endpoints com Swagger ou OpenAPI
 
 ## Dicas úteis
@@ -238,5 +258,3 @@ cp .env.example .env
 docker compose up -d
 npm run dev
 ```
-
-Se quiser, posso continuar e criar também um README mais profissional com badges, instruções de ambiente Windows/Linux, e uma seção de API pronta para expansão do projeto.
